@@ -1,0 +1,11 @@
+models
+data
+venv
+helpers.pyc settings.pyc
+trained_models.rar
+predictions10_luna16_fs
+predictions15_luna16_fs
+predictions20_luna16_fs
+resources
+.env
+*.pyc

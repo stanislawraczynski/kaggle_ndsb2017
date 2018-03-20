@@ -4,8 +4,9 @@ import glob
 import os
 import cv2  # conda install -c https://conda.anaconda.org/menpo opencv3
 import scipy.misc
-import dicom  # pip install pydicom
+import pydicom as dicom  # pip install pydicom
 import numpy
+import math
 from multiprocessing import Pool
 
 
@@ -64,7 +65,7 @@ def extract_dicom_images_patient(src_dir):
     #assert slices[0].ImageOrientationPatient == [1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
     cos_value = (slices[0].ImageOrientationPatient[0])
     cos_degree = round(math.degrees(math.acos(cos_value)),2)
-    
+
     pixels = get_pixels_hu(slices)
     image = pixels
     print(image.shape)
@@ -115,4 +116,5 @@ def extract_dicom_images(clean_targetdir_first=False, only_patient_id=None):
 
 
 if __name__ == '__main__':
-    extract_dicom_images(clean_targetdir_first=False, only_patient_id=None)
+    extract_dicom_images(clean_targetdir_first=False, only_patient_id="BadA")
+    extract_dicom_images(clean_targetdir_first=False, only_patient_id="BadB")

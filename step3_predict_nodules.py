@@ -334,10 +334,10 @@ def predict_cubes(model_path, continue_job, only_patient_id=None, luna16=False, 
 if __name__ == "__main__":
 
     CONTINUE_JOB = True
-    only_patient_id = None  # "ebd601d40a18634b100c92e7db39f585"
+    only_patient_id = "BadA"
 
     if not CONTINUE_JOB or only_patient_id is not None:
-        for file_path in glob.glob("c:/tmp/*.*"):
+        for file_path in glob.glob("/tmp/*"):
             if not os.path.isdir(file_path):
                 remove_file = True
                 if only_patient_id is not None:
@@ -360,4 +360,3 @@ if __name__ == "__main__":
                     predict_cubes("models/model_luna_posnegndsb_v" + str(version) + "__fs_h" + str(holdout) + "_end.hd5", CONTINUE_JOB, only_patient_id=only_patient_id, magnification=magnification, flip=False, train_data=True, holdout_no=holdout, ext_name="luna_posnegndsb_v" + str(version), fold_count=2)
                     if holdout == 0:
                         predict_cubes("models/model_luna_posnegndsb_v" + str(version) + "__fs_h" + str(holdout) + "_end.hd5", CONTINUE_JOB, only_patient_id=only_patient_id, magnification=magnification, flip=False, train_data=False, holdout_no=holdout, ext_name="luna_posnegndsb_v" + str(version), fold_count=2)
-
