@@ -9,8 +9,8 @@ MEAN_PIXEL_VALUE_NODULE = 41
 LUNA_SUBSET_START_INDEX = 0
 SEGMENTER_IMG_SIZE = 320
 
-BASE_DIR_SSD = "/home/sraczynski/workspace/pg/gumed/kaggle_ndsb2017/data/gumed/"
-BASE_DIR = "/home/sraczynski/workspace/pg/gumed/kaggle_ndsb2017/data/gumed/"
+BASE_DIR_SSD = "/home/sraczynski/workspace/pg/kaggle_ndsb2017/data/gumed/"
+BASE_DIR = "/home/sraczynski/workspace/pg/kaggle_ndsb2017/data/gumed/"
 EXTRA_DATA_DIR = "resources/"
 NDSB3_RAW_SRC_DIR = BASE_DIR + ""
 LUNA16_RAW_SRC_DIR = BASE_DIR + ""
