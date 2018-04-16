@@ -327,6 +327,3 @@ def get_patient_fold(patient_id, submission_set_neg=False):
     res = PATIENT_LIST.index(patient_id)
     res %= 6
     return res
-
-
-

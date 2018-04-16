@@ -281,10 +281,10 @@ if __name__ == "__main__":
         exit()
     only_patient_id = sys.argv[1]
 
-    process_image("data/gumed/" + only_patient_id + ".mhd")
+    process_image("data/gumed/norm/" + only_patient_id + ".mhd")
     # extract_dicom_images(clean_targetdir_first=False, only_patient_id=only_patient_id)
 
-    for magnification in [1, 1.5, 2]:
+    for magnification in [1]: #[1, 1.5, 2]:
         predict_cubes(
             "models/model_luna16_full__fs_best.hd5",
             only_patient_id=only_patient_id,
